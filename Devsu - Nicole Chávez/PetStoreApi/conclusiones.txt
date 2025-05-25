@@ -1,0 +1,10 @@
+* Hallazgos
+- Las pruebas se ejecutaron y pasaron correctamente
+- La mascota se creó correctamente, se pudo actualizar una mascota y verificar que se ha modificado
+- La documentación es de gran ayuda
+- En la carpeta reporte se puede observar los resultados
+
+* Conclusiones
+- La API de PetStore responde de manera rápida y eficiente a las solicitudes
+- Siempre se necesita validar cuando se hace se insertan o modifican registros
+- La documentación siempre debe ser clara y describer principalmente las operaciones CRUD

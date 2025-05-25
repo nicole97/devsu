@@ -1,0 +1,2466 @@
+18:47:46.769 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+18:47:47.711 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:47:47.941 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 137
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":0,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+18:47:48.487 [main] DEBUG com.intuit.karate - response time in milliseconds: 539
+1 < 200
+1 < Date: Sat, 24 May 2025 23:47:48 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":9223372036854775807,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+18:47:48.543 [main] INFO  com.intuit.karate - [print] created pet id is:  9223372036854775807 
+18:47:48.564 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:47:48.579 [main] ERROR com.intuit.karate - classpath:com/petstore/api/petstore.feature:37
+Given path 'pet', petId
+js failed:
+>>>>
+01: ['pet', petId]
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "petId" is not defined
+- <js>.:program(Unnamed:1)
+
+classpath:com/petstore/api/petstore.feature:37
+18:47:48.596 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:47:48.600 [main] DEBUG com.intuit.karate - request:
+1 > PUT https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 228
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":123456,"\/\/ Replace this with the actual petId obtained from the previous scenario\n  \"category\"":{"id":0,"name":"string"},"name":"Buddy Updated","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"}
+
+18:47:48.850 [main] DEBUG com.intuit.karate - response time in milliseconds: 248
+1 < 200
+1 < Date: Sat, 24 May 2025 23:47:49 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":123456,"name":"Buddy Updated","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"}
+
+18:47:48.867 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:47:48.872 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/findByStatus?status=sold
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+18:47:49.123 [main] DEBUG com.intuit.karate - response time in milliseconds: 249
+1 < 200
+1 < Date: Sat, 24 May 2025 23:47:49 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+[{"id":152265,"category":{"id":460852,"name":"yTWLaRhP"},"name":"doggie","photoUrls":["ojZecr"],"tags":[{"id":428448,"name":"CfIMFdkc"}],"status":"sold"},{"id":741940,"category":{"id":357169,"name":"VOlGlosM"},"name":"doggie","photoUrls":["Ojqqtg"],"tags":[{"id":365653,"name":"VvYTQFHo"}],"status":"sold"},{"id":223,"category":{"id":891,"name":"Unbranded Frozen Chicken"},"name":"Awesome Wooden Table","photoUrls":["http://placeimg.com/640/480/animals"],"tags":[{"id":414,"name":"Eum ad corporis. Et et corporis omnis ipsam asperiores occaecati est possimus."},{"id":643,"name":"inventore"}],"status":"sold"},{"id":755,"category":{"id":1,"name":"dog"},"name":"Marta","photoUrls":["https://example.com/photo.jpg"],"tags":[{"id":1,"name":"funny"}],"status":"sold"},{"id":9223372036854775721,"category":{"id":-19816953,"name":"officia"},"name":"doggie","photoUrls":["aute do","aliquip"],"tags":[{"id":-7497000,"name":"velit dolore deserunt nostrud"},{"id":61724686,"name":"consequat voluptate pariatur adipisicing aliquip"}],"status":"sold"},{"id":9223372036854775739,"category":{"id":-39782949,"name":"consectetur in dolor"},"name":"doggie","photoUrls":["nostrud Excepteur","in reprehenderit magna"],"tags":[{"id":63823124,"name":"adipisicing dolor"},{"id":87743804,"name":"commodo non enim officia ipsum"}],"status":"sold"},{"id":220,"category":{"id":2,"name":"pinscher"},"name":"gigante2","photoUrls":["https://site.com/rex.jpg"],"tags":[{"id":1,"name":"desaforado"}],"status":"sold"},{"id":3708840,"category":{"id":9855812,"name":"Duis in commodo"},"name":"doggie","photoUrls":["minim id in sit","est esse culpa nisi"],"tags":[{"id":-89808508,"name":"sit"},{"id":-5238278,"name":"dolor in"}],"status":"sold"},{"id":24093935,"category":{"id":-6714225,"name":"do magna"},"name":"doggie","photoUrls":["aute","velit"],"tags":[{"id":71561130,"name":"deserunt ut occaecat"},{"id":-1195842,"name":"nulla nostrud occaeca"}],"status":"sold"},{"id":3971,"category":{"id":1,"name":"dogs"},"name":"updated_doggie","photoUrls":["https://example.com/dog.jpg"],"tags":[{"id":1,"name":"cute"}],"status":"sold"},{"id":686,"category":{"id":1,"name":"dog"},"name":"Marta","photoUrls":["https://example.com/photo.jpg"],"tags":[{"id":1,"name":"funny"}],"status":"sold"},{"id":991,"category":{"id":1,"name":"dog"},"name":"Marta","photoUrls":["https://example.com/photo.jpg"],"tags":[{"id":1,"name":"funny"}],"status":"sold"},{"id":243,"category":{"id":1,"name":"dog"},"name":"Marta","photoUrls":["https://example.com/photo.jpg"],"tags":[{"id":1,"name":"funny"}],"status":"sold"},{"id":12345,"category":{"id":1,"name":"Dogs"},"name":"Rexy","photoUrls":["https://example.com/rexy.jpg"],"tags":[{"id":1,"name":"friendly"}],"status":"sold"},{"id":16,"category":{"id":1,"name":"boy"},"name":"Tom","photoUrls":["https://upload.wikimedia.org/wikipedia/commons/0/0c/Deutscher_Sch%C3%A4ferhund-_portrait.JPG"],"tags":[{"id":16,"name":"nemeckaya ovcharka"}],"status":"sold"},{"id":703,"category":{"id":1,"name":"dog"},"name":"Marta","photoUrls":["https://example.com/photo.jpg"],"tags":[{"id":1,"name":"funny"}],"status":"sold"},{"id":15,"name":"Nelson","photoUrls":[],"tags":[],"status":"sold"},{"id":911,"name":"Gosha","photoUrls":[],"tags":[],"status":"sold"},{"id":50,"category":{"id":2,"name":"dog_category50"},"name":"dognamesold","photoUrls":["string"],"tags":[{"id":51,"name":"dognamesold"}],"status":"sold"},{"id":24572652,"category":{"id":70314021,"name":"adipisicing dolore"},"name":"doggie","photoUrls":["magna dolor Ut in","in eiusm"],"tags":[{"id":85643839,"name":"aliquip sit dolor"},{"id":-89364963,"name":"elit id reprehenderit eiusmod exercitation"}],"status":"sold"},{"id":76621170,"category":{"id":16364966,"name":"Ut cupidatat velit irure minim"},"name":"doggie","photoUrls":["dolore quis","elit ea aliqua dolor adipisicing"],"tags":[{"id":24591216,"name":"ullamco magna laborum ut"},{"id":52512638,"name":"sunt non Lorem"}],"status":"sold"},{"id":51338511,"category":{"id":43003430,"name":"ex ullamco"},"name":"doggie","photoUrls":["sit ipsum","nulla eu aliqua incididunt"],"tags":[{"id":1864541,"name":"anim elit amet"},{"id":98553871,"name":"ut"}],"status":"sold"},{"id":71551342,"category":{"id":14955550,"name":"ipsum do amet"},"name":"doggie","photoUrls":["dolore dolor","pariatur elit ea"],"tags":[{"id":-17398234,"name":"non ex"},{"id":-32010324,"name":"ut culpa aliqua est non"}],"status":"sold"},{"id":82188160,"category":{"id":81640824,"name":"nisi exercitation reprehenderit dolore"},"name":"doggie","photoUrls":["proident eu enim","mollit cillum nisi"],"tags":[{"id":6316356,"name":"laborum magn"},{"id":73149614,"name":"veniam fugiat amet si"}],"status":"sold"},{"id":33377689,"category":{"id":-5871190,"name":"in voluptate velit proident"},"name":"doggie","photoUrls":["amet in","aute in"],"tags":[{"id":-26593919,"name":"tempor eiusmod ipsum"},{"id":78722837,"name":"in sit ullamco aliqua qui"}],"status":"sold"},{"id":2022000,"category":{"id":0,"name":"bird"},"name":"Star","photoUrls":["string"],"tags":[{"id":0,"name":"shy"}],"status":"sold"},{"id":87705905,"category":{"id":22032096,"name":"reprehenderit in minim"},"name":"doggie","photoUrls":["cillum Ut ","et adipisicing consequat"],"tags":[{"id":-14103627,"name":"reprehenderit"},{"id":47181501,"name":"occaecat"}],"status":"sold"},{"id":38541659,"category":{"id":-70999792,"name":"dolore aliqua irure"},"name":"doggie","photoUrls":["cupidatat quis","ipsum deserunt"],"tags":[{"id":96985450,"name":"proident adipisicing officia"},{"id":-17203769,"name":"sunt reprehenderit"}],"status":"sold"},{"id":426,"category":{"id":1,"name":"dog"},"name":"Marta","photoUrls":["https://example.com/photo.jpg"],"tags":[{"id":1,"name":"funny"}],"status":"sold"},{"id":5555,"category":{"id":0,"name":"cat"},"name":"pris","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":23327731,"category":{"id":-92357313,"name":"reprehenderit ut nostrud ut"},"name":"doggie","photoUrls":["Lorem laboris","laboris"],"tags":[{"id":89386643,"name":"elit esse cillum"},{"id":-23396785,"name":"minim consectetur"}],"status":"sold"},{"id":70119872,"category":{"id":93142102,"name":"Змея"},"name":"Анаконда","photoUrls":["mollit","https://irecommend.ru/sites/default/files/product-images/98227/3lJyZagay9aoxv06o6TJCQ.jpg"],"tags":[{"id":-19037377,"name":"deserunt veniam nulla reprehenderit"},{"id":51503358,"name":"ullamco aliqua Excepteur cillum"}],"status":"sold"},{"id":1777123123,"category":{"id":1777,"name":"fishs"},"name":"Nemo FISH","photoUrls":["https://www.google.com/imgres?q=fish&imgurl=https%3A%2F%2Fwww.aqueon.com%2F-%2Fmedia%2Fproject%2Foneweb%2Faqueon%2Fus%2Fblog%2Fways-to-know-your-fish-are-happy%2Ffish-are-happy-and-healthy-1.png&imgrefurl=https%3A%2F%2Fwww.aqueon.com%2Farticles%2Fways-to-know-your-fish-are-happy&docid=aYbA3xYlpw0ZcM&tbnid=uVomlcyWEqpA8M&vet=12ahUKEwibjaX_oeOIAxU0BdsEHe31LPwQM3oECB8QAA..i&w=1000&h=650&hcb=2&ved=2ahUKEwibjaX_oeOIAxU0BdsEHe31LPwQM3oECB8QAA","<string>"],"tags":[{"id":1777,"name":"Fish"},{"id":1777,"name":"Fish"}],"status":"sold"},{"id":1711982,"category":{"id":52551857,"name":"non Lorem tempor"},"name":"doggie","photoUrls":["veniam","reprehenderit commodo proident occaecat"],"tags":[{"id":-12689894,"name":"veniam mollit"},{"id":-27514803,"name":"sed ullamco ut"}],"status":"sold"},{"id":52931566,"category":{"id":91307171,"name":"sint aliqua"},"name":"doggie","photoUrls":["ut culpa null","quis"],"tags":[{"id":-40794559,"name":"velit proident nulla"},{"id":-14228534,"name":"ess"}],"status":"sold"},{"id":943,"category":{"id":1,"name":"dog"},"name":"Marta","photoUrls":["https://example.com/photo.jpg"],"tags":[{"id":1,"name":"funny"}],"status":"sold"},{"id":13,"category":{"id":0,"name":"cats"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":13969661,"name":"TestPet","photoUrls":["http://example.com/photo.jpg"],"tags":[],"status":"sold"},{"id":31091472,"name":"TestPet","photoUrls":["http://example.com/photo.jpg"],"tags":[],"status":"sold"},{"id":73279740,"name":"TestPet","photoUrls":["http://example.com/photo.jpg"],"tags":[],"status":"sold"},{"id":91561670,"name":"TestPet","photoUrls":["http://example.com/photo.jpg"],"tags":[],"status":"sold"},{"id":28842189,"name":"TestPet","photoUrls":["http://example.com/photo.jpg"],"tags":[],"status":"sold"},{"id":33998475,"name":"TestPet","photoUrls":["http://example.com/photo.jpg"],"tags":[],"status":"sold"},{"id":60552771,"name":"TestPet","photoUrls":["http://example.com/photo.jpg"],"tags":[],"status":"sold"},{"id":71155137,"name":"TestPet","photoUrls":["http://example.com/photo.jpg"],"tags":[],"status":"sold"},{"id":89329286,"name":"TestPet","photoUrls":["http://example.com/photo.jpg"],"tags":[],"status":"sold"},{"id":93995548,"name":"TestPet","photoUrls":["http://example.com/photo.jpg"],"tags":[],"status":"sold"},{"id":69549371,"name":"TestPet","photoUrls":["http://example.com/photo.jpg"],"tags":[],"status":"sold"},{"id":20163721,"name":"TestPet","photoUrls":["http://example.com/photo.jpg"],"tags":[],"status":"sold"}]
+
+18:47:49.146 [main] ERROR com.intuit.karate - classpath:com/petstore/api/petstore.feature:76
+And match response[0].name == 'Buddy Updated'
+match failed: EQUALS
+  $ | not equal (STRING:STRING)
+  'doggie'
+  'Buddy Updated'
+
+classpath:com/petstore/api/petstore.feature:76
+18:50:33.316 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+18:50:34.604 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:50:34.969 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 137
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":0,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+18:50:35.713 [main] DEBUG com.intuit.karate - response time in milliseconds: 740
+1 < 200
+1 < Date: Sat, 24 May 2025 23:50:35 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":9223372036854775807,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+18:50:35.727 [main] INFO  com.intuit.karate - [print] Created pet ID is:  9223372036854775807 
+18:50:35.749 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:50:35.768 [main] ERROR com.intuit.karate - classpath:com/petstore/api/petstore.feature:35
+Given path 'pet', petId
+js failed:
+>>>>
+01: ['pet', petId]
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "petId" is not defined
+- <js>.:program(Unnamed:1)
+
+classpath:com/petstore/api/petstore.feature:35
+18:50:35.802 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:50:35.806 [main] ERROR com.intuit.karate - classpath:com/petstore/api/petstore.feature:42
+* def updatedPet =
+"""
+{
+  "id": " " + petId + " "",
+  "category": {
+  "id": 0,
+  "name": "string"
+  },
+  "name": "Buddy Updated",
+  "photoUrls": ["string"],
+  "tags": [
+  {
+  "id": 0,
+  "name": "string"
+  }
+  ],
+  "status": "sold"
+  }
+"""
+net.minidev.json.parser.ParseException: Unexpected token + at position 13.
+classpath:com/petstore/api/petstore.feature:42
+18:50:35.820 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:50:35.826 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/findByStatus?status=sold
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+18:50:36.074 [main] DEBUG com.intuit.karate - response time in milliseconds: 246
+1 < 200
+1 < Date: Sat, 24 May 2025 23:50:36 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+[{"id":152265,"category":{"id":460852,"name":"yTWLaRhP"},"name":"doggie","photoUrls":["ojZecr"],"tags":[{"id":428448,"name":"CfIMFdkc"}],"status":"sold"},{"id":741940,"category":{"id":357169,"name":"VOlGlosM"},"name":"doggie","photoUrls":["Ojqqtg"],"tags":[{"id":365653,"name":"VvYTQFHo"}],"status":"sold"},{"id":223,"category":{"id":891,"name":"Unbranded Frozen Chicken"},"name":"Awesome Wooden Table","photoUrls":["http://placeimg.com/640/480/animals"],"tags":[{"id":414,"name":"Eum ad corporis. Et et corporis omnis ipsam asperiores occaecati est possimus."},{"id":643,"name":"inventore"}],"status":"sold"},{"id":755,"category":{"id":1,"name":"dog"},"name":"Marta","photoUrls":["https://example.com/photo.jpg"],"tags":[{"id":1,"name":"funny"}],"status":"sold"},{"id":9223372036854775721,"category":{"id":-19816953,"name":"officia"},"name":"doggie","photoUrls":["aute do","aliquip"],"tags":[{"id":-7497000,"name":"velit dolore deserunt nostrud"},{"id":61724686,"name":"consequat voluptate pariatur adipisicing aliquip"}],"status":"sold"},{"id":9223372036854775739,"category":{"id":-39782949,"name":"consectetur in dolor"},"name":"doggie","photoUrls":["nostrud Excepteur","in reprehenderit magna"],"tags":[{"id":63823124,"name":"adipisicing dolor"},{"id":87743804,"name":"commodo non enim officia ipsum"}],"status":"sold"},{"id":12,"category":{"id":0,"name":"dogs"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":220,"category":{"id":2,"name":"pinscher"},"name":"gigante2","photoUrls":["https://site.com/rex.jpg"],"tags":[{"id":1,"name":"desaforado"}],"status":"sold"},{"id":3708840,"category":{"id":9855812,"name":"Duis in commodo"},"name":"doggie","photoUrls":["minim id in sit","est esse culpa nisi"],"tags":[{"id":-89808508,"name":"sit"},{"id":-5238278,"name":"dolor in"}],"status":"sold"},{"id":24093935,"category":{"id":-6714225,"name":"do magna"},"name":"doggie","photoUrls":["aute","velit"],"tags":[{"id":71561130,"name":"deserunt ut occaecat"},{"id":-1195842,"name":"nulla nostrud occaeca"}],"status":"sold"},{"id":3971,"category":{"id":1,"name":"dogs"},"name":"updated_doggie","photoUrls":["https://example.com/dog.jpg"],"tags":[{"id":1,"name":"cute"}],"status":"sold"},{"id":686,"category":{"id":1,"name":"dog"},"name":"Marta","photoUrls":["https://example.com/photo.jpg"],"tags":[{"id":1,"name":"funny"}],"status":"sold"},{"id":991,"category":{"id":1,"name":"dog"},"name":"Marta","photoUrls":["https://example.com/photo.jpg"],"tags":[{"id":1,"name":"funny"}],"status":"sold"},{"id":243,"category":{"id":1,"name":"dog"},"name":"Marta","photoUrls":["https://example.com/photo.jpg"],"tags":[{"id":1,"name":"funny"}],"status":"sold"},{"id":12345,"category":{"id":1,"name":"Dogs"},"name":"Rexy","photoUrls":["https://example.com/rexy.jpg"],"tags":[{"id":1,"name":"friendly"}],"status":"sold"},{"id":16,"category":{"id":1,"name":"boy"},"name":"Tom","photoUrls":["https://upload.wikimedia.org/wikipedia/commons/0/0c/Deutscher_Sch%C3%A4ferhund-_portrait.JPG"],"tags":[{"id":16,"name":"nemeckaya ovcharka"}],"status":"sold"},{"id":703,"category":{"id":1,"name":"dog"},"name":"Marta","photoUrls":["https://example.com/photo.jpg"],"tags":[{"id":1,"name":"funny"}],"status":"sold"},{"id":15,"name":"Nelson","photoUrls":[],"tags":[],"status":"sold"},{"id":911,"name":"Gosha","photoUrls":[],"tags":[],"status":"sold"},{"id":50,"category":{"id":2,"name":"dog_category50"},"name":"dognamesold","photoUrls":["string"],"tags":[{"id":51,"name":"dognamesold"}],"status":"sold"},{"id":24572652,"category":{"id":70314021,"name":"adipisicing dolore"},"name":"doggie","photoUrls":["magna dolor Ut in","in eiusm"],"tags":[{"id":85643839,"name":"aliquip sit dolor"},{"id":-89364963,"name":"elit id reprehenderit eiusmod exercitation"}],"status":"sold"},{"id":76621170,"category":{"id":16364966,"name":"Ut cupidatat velit irure minim"},"name":"doggie","photoUrls":["dolore quis","elit ea aliqua dolor adipisicing"],"tags":[{"id":24591216,"name":"ullamco magna laborum ut"},{"id":52512638,"name":"sunt non Lorem"}],"status":"sold"},{"id":51338511,"category":{"id":43003430,"name":"ex ullamco"},"name":"doggie","photoUrls":["sit ipsum","nulla eu aliqua incididunt"],"tags":[{"id":1864541,"name":"anim elit amet"},{"id":98553871,"name":"ut"}],"status":"sold"},{"id":71551342,"category":{"id":14955550,"name":"ipsum do amet"},"name":"doggie","photoUrls":["dolore dolor","pariatur elit ea"],"tags":[{"id":-17398234,"name":"non ex"},{"id":-32010324,"name":"ut culpa aliqua est non"}],"status":"sold"},{"id":82188160,"category":{"id":81640824,"name":"nisi exercitation reprehenderit dolore"},"name":"doggie","photoUrls":["proident eu enim","mollit cillum nisi"],"tags":[{"id":6316356,"name":"laborum magn"},{"id":73149614,"name":"veniam fugiat amet si"}],"status":"sold"},{"id":33377689,"category":{"id":-5871190,"name":"in voluptate velit proident"},"name":"doggie","photoUrls":["amet in","aute in"],"tags":[{"id":-26593919,"name":"tempor eiusmod ipsum"},{"id":78722837,"name":"in sit ullamco aliqua qui"}],"status":"sold"},{"id":2022000,"category":{"id":0,"name":"bird"},"name":"Star","photoUrls":["string"],"tags":[{"id":0,"name":"shy"}],"status":"sold"},{"id":87705905,"category":{"id":22032096,"name":"reprehenderit in minim"},"name":"doggie","photoUrls":["cillum Ut ","et adipisicing consequat"],"tags":[{"id":-14103627,"name":"reprehenderit"},{"id":47181501,"name":"occaecat"}],"status":"sold"},{"id":38541659,"category":{"id":-70999792,"name":"dolore aliqua irure"},"name":"doggie","photoUrls":["cupidatat quis","ipsum deserunt"],"tags":[{"id":96985450,"name":"proident adipisicing officia"},{"id":-17203769,"name":"sunt reprehenderit"}],"status":"sold"},{"id":426,"category":{"id":1,"name":"dog"},"name":"Marta","photoUrls":["https://example.com/photo.jpg"],"tags":[{"id":1,"name":"funny"}],"status":"sold"},{"id":5555,"category":{"id":0,"name":"cat"},"name":"pris","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":23327731,"category":{"id":-92357313,"name":"reprehenderit ut nostrud ut"},"name":"doggie","photoUrls":["Lorem laboris","laboris"],"tags":[{"id":89386643,"name":"elit esse cillum"},{"id":-23396785,"name":"minim consectetur"}],"status":"sold"},{"id":70119872,"category":{"id":93142102,"name":"Змея"},"name":"Анаконда","photoUrls":["mollit","https://irecommend.ru/sites/default/files/product-images/98227/3lJyZagay9aoxv06o6TJCQ.jpg"],"tags":[{"id":-19037377,"name":"deserunt veniam nulla reprehenderit"},{"id":51503358,"name":"ullamco aliqua Excepteur cillum"}],"status":"sold"},{"id":1777123123,"category":{"id":1777,"name":"fishs"},"name":"Nemo FISH","photoUrls":["https://www.google.com/imgres?q=fish&imgurl=https%3A%2F%2Fwww.aqueon.com%2F-%2Fmedia%2Fproject%2Foneweb%2Faqueon%2Fus%2Fblog%2Fways-to-know-your-fish-are-happy%2Ffish-are-happy-and-healthy-1.png&imgrefurl=https%3A%2F%2Fwww.aqueon.com%2Farticles%2Fways-to-know-your-fish-are-happy&docid=aYbA3xYlpw0ZcM&tbnid=uVomlcyWEqpA8M&vet=12ahUKEwibjaX_oeOIAxU0BdsEHe31LPwQM3oECB8QAA..i&w=1000&h=650&hcb=2&ved=2ahUKEwibjaX_oeOIAxU0BdsEHe31LPwQM3oECB8QAA","<string>"],"tags":[{"id":1777,"name":"Fish"},{"id":1777,"name":"Fish"}],"status":"sold"},{"id":1711982,"category":{"id":52551857,"name":"non Lorem tempor"},"name":"doggie","photoUrls":["veniam","reprehenderit commodo proident occaecat"],"tags":[{"id":-12689894,"name":"veniam mollit"},{"id":-27514803,"name":"sed ullamco ut"}],"status":"sold"},{"id":52931566,"category":{"id":91307171,"name":"sint aliqua"},"name":"doggie","photoUrls":["ut culpa null","quis"],"tags":[{"id":-40794559,"name":"velit proident nulla"},{"id":-14228534,"name":"ess"}],"status":"sold"},{"id":943,"category":{"id":1,"name":"dog"},"name":"Marta","photoUrls":["https://example.com/photo.jpg"],"tags":[{"id":1,"name":"funny"}],"status":"sold"},{"id":13,"category":{"id":0,"name":"cats"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":13969661,"name":"TestPet","photoUrls":["http://example.com/photo.jpg"],"tags":[],"status":"sold"},{"id":31091472,"name":"TestPet","photoUrls":["http://example.com/photo.jpg"],"tags":[],"status":"sold"},{"id":73279740,"name":"TestPet","photoUrls":["http://example.com/photo.jpg"],"tags":[],"status":"sold"},{"id":91561670,"name":"TestPet","photoUrls":["http://example.com/photo.jpg"],"tags":[],"status":"sold"},{"id":28842189,"name":"TestPet","photoUrls":["http://example.com/photo.jpg"],"tags":[],"status":"sold"},{"id":33998475,"name":"TestPet","photoUrls":["http://example.com/photo.jpg"],"tags":[],"status":"sold"},{"id":60552771,"name":"TestPet","photoUrls":["http://example.com/photo.jpg"],"tags":[],"status":"sold"},{"id":71155137,"name":"TestPet","photoUrls":["http://example.com/photo.jpg"],"tags":[],"status":"sold"},{"id":89329286,"name":"TestPet","photoUrls":["http://example.com/photo.jpg"],"tags":[],"status":"sold"},{"id":93995548,"name":"TestPet","photoUrls":["http://example.com/photo.jpg"],"tags":[],"status":"sold"},{"id":69549371,"name":"TestPet","photoUrls":["http://example.com/photo.jpg"],"tags":[],"status":"sold"},{"id":20163721,"name":"TestPet","photoUrls":["http://example.com/photo.jpg"],"tags":[],"status":"sold"}]
+
+18:50:36.099 [main] ERROR com.intuit.karate - classpath:com/petstore/api/petstore.feature:71
+And match response[0].name == 'Buddy Updated'
+match failed: EQUALS
+  $ | not equal (STRING:STRING)
+  'doggie'
+  'Buddy Updated'
+
+classpath:com/petstore/api/petstore.feature:71
+18:50:53.956 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+18:50:55.427 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:50:56.090 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 137
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":0,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+18:50:56.838 [main] DEBUG com.intuit.karate - response time in milliseconds: 740
+1 < 200
+1 < Date: Sat, 24 May 2025 23:50:57 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":9223372036854775807,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+18:50:56.866 [main] INFO  com.intuit.karate - [print] created pet id is:  9223372036854775807 
+18:50:56.916 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:50:56.953 [main] ERROR com.intuit.karate - classpath:com/petstore/api/petstore.feature:37
+Given path 'pet', petId
+js failed:
+>>>>
+01: ['pet', petId]
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "petId" is not defined
+- <js>.:program(Unnamed:1)
+
+classpath:com/petstore/api/petstore.feature:37
+18:50:56.997 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:50:57.007 [main] DEBUG com.intuit.karate - request:
+1 > PUT https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 228
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":123456,"\/\/ Replace this with the actual petId obtained from the previous scenario\n  \"category\"":{"id":0,"name":"string"},"name":"Buddy Updated","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"}
+
+18:50:57.257 [main] DEBUG com.intuit.karate - response time in milliseconds: 248
+1 < 200
+1 < Date: Sat, 24 May 2025 23:50:57 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":123456,"name":"Buddy Updated","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"}
+
+18:50:57.279 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:50:57.294 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/findByStatus?status=sold
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+18:50:57.544 [main] DEBUG com.intuit.karate - response time in milliseconds: 247
+1 < 200
+1 < Date: Sat, 24 May 2025 23:50:57 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+[{"id":870,"category":{"id":6,"name":"SuperDogs"},"name":"Xanxan","photoUrls":["string"],"tags":[{"id":6,"name":"superdog"}],"status":"sold"},{"id":1234567,"category":{"id":35,"name":"caini"},"name":"Grivei update","photoUrls":[],"tags":[{"id":1,"name":"dalmatian"}],"status":"sold"},{"id":20593238,"category":{"id":96650357,"name":"ut aute"},"name":"doggie","photoUrls":["in deserunt sit qui elit","do dolore"],"tags":[{"id":80489283,"name":"dolore elit aute Excepteur anim"},{"id":-29854588,"name":"enim"}],"status":"sold"},{"id":485,"category":{"id":1,"name":"dog"},"name":"Marta","photoUrls":["https://example.com/photo.jpg"],"tags":[{"id":1,"name":"funny"}],"status":"sold"},{"id":927,"category":{"id":1,"name":"dog"},"name":"Marta","photoUrls":["https://example.com/photo.jpg"],"tags":[{"id":1,"name":"funny"}],"status":"sold"},{"id":826,"category":{"id":1,"name":"dog"},"name":"Marta","photoUrls":["https://example.com/photo.jpg"],"tags":[{"id":1,"name":"funny"}],"status":"sold"},{"id":128,"category":{"id":1,"name":"dog"},"name":"Marta","photoUrls":["https://example.com/photo.jpg"],"tags":[{"id":1,"name":"funny"}],"status":"sold"},{"id":238,"category":{"id":1,"name":"dog"},"name":"Marta","photoUrls":["https://example.com/photo.jpg"],"tags":[{"id":1,"name":"funny"}],"status":"sold"},{"id":802,"category":{"id":1,"name":"dog"},"name":"Marta","photoUrls":["https://example.com/photo.jpg"],"tags":[{"id":1,"name":"funny"}],"status":"sold"},{"id":38,"category":{"id":1,"name":"dog"},"name":"Marta","photoUrls":["https://example.com/photo.jpg"],"tags":[{"id":1,"name":"funny"}],"status":"sold"},{"id":260,"category":{"id":1,"name":"dog"},"name":"Marta","photoUrls":["https://example.com/photo.jpg"],"tags":[{"id":1,"name":"funny"}],"status":"sold"},{"id":915,"category":{"id":1,"name":"dog"},"name":"Marta","photoUrls":["https://example.com/photo.jpg"],"tags":[{"id":1,"name":"funny"}],"status":"sold"},{"id":152,"category":{"id":1,"name":"dog"},"name":"Marta","photoUrls":["https://example.com/photo.jpg"],"tags":[{"id":1,"name":"funny"}],"status":"sold"},{"id":123456,"name":"Buddy Updated","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":152265,"category":{"id":460852,"name":"yTWLaRhP"},"name":"doggie","photoUrls":["ojZecr"],"tags":[{"id":428448,"name":"CfIMFdkc"}],"status":"sold"},{"id":741940,"category":{"id":357169,"name":"VOlGlosM"},"name":"doggie","photoUrls":["Ojqqtg"],"tags":[{"id":365653,"name":"VvYTQFHo"}],"status":"sold"},{"id":401,"category":{"id":1,"name":"Cats"},"name":"Maxfacor","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":560,"category":{"id":1,"name":"dog"},"name":"Marta","photoUrls":["https://example.com/photo.jpg"],"tags":[{"id":1,"name":"funny"}],"status":"sold"},{"id":9223372036854775528,"category":{"id":1,"name":"cat"},"name":"Busya","photoUrls":["https://zoocomplex.com.ua/image/catalog/blog/article-id-532/article-id-532-01.webp"],"tags":[{"id":1,"name":"little"}],"status":"sold"},{"id":9223372036854775742,"category":{"id":42892111,"name":"dolore laboris exercitation enim"},"name":"doggie","photoUrls":["enim do amet et","in incididunt nulla"],"tags":[{"id":13217034,"name":"Duis in"},{"id":-1050560,"name":"occaecat nulla et Duis"}],"status":"sold"},{"id":56331470,"category":{"id":28262311,"name":"nostrud proident"},"name":"doggie","photoUrls":["sunt dolor veniam aliqua","nulla anim ex"],"tags":[{"id":21515670,"name":"voluptate in elit ani"},{"id":-36858804,"name":"proident non deserunt"}],"status":"sold"},{"id":91507602,"category":{"id":-95494262,"name":"sit ea"},"name":"doggie","photoUrls":["deserunt","id sint et"],"tags":[{"id":-54029842,"name":"ullamco"},{"id":13198949,"name":"id"}],"status":"sold"},{"id":3366,"category":{"id":1,"name":"dogs"},"name":"updated_doggie","photoUrls":["https://example.com/dog.jpg"],"tags":[{"id":1,"name":"cute"}],"status":"sold"},{"id":24093935,"category":{"id":-6714225,"name":"do magna"},"name":"doggie","photoUrls":["aute","velit"],"tags":[{"id":71561130,"name":"deserunt ut occaecat"},{"id":-1195842,"name":"nulla nostrud occaeca"}],"status":"sold"},{"id":3903023,"category":{"id":-56789506,"name":"cillum p"},"name":"doggie","photoUrls":["aliquip Excepteur","commodo dolore consequat eu"],"tags":[{"id":60937326,"name":"irure in"},{"id":20218536,"name":"sint consectetur ad voluptate"}],"status":"sold"},{"id":54985499,"category":{"id":21524166,"name":"laborum amet"},"name":"doggie","photoUrls":["et deserunt commodo",""],"tags":[{"id":83948460,"name":"Duis cillum pariatur"},{"id":-32770929,"name":"fugiat sunt"}],"status":"sold"},{"id":220,"category":{"id":2,"name":"pinscher"},"name":"gigante2","photoUrls":["https://site.com/rex.jpg"],"tags":[{"id":1,"name":"desaforado"}],"status":"sold"},{"id":4862,"category":{"id":1,"name":"dogs"},"name":"updated_doggie","photoUrls":["https://example.com/dog.jpg"],"tags":[{"id":1,"name":"cute"}],"status":"sold"},{"id":1262,"category":{"id":1,"name":"dogs"},"name":"updated_doggie","photoUrls":["https://example.com/dog.jpg"],"tags":[{"id":1,"name":"cute"}],"status":"sold"},{"id":1111,"category":{"id":6,"name":"Superdog"},"name":"Sim","photoUrls":["string"],"tags":[{"id":6,"name":"Superdog"}],"status":"sold"},{"id":935,"category":{"id":1,"name":"dog"},"name":"Marta","photoUrls":["https://example.com/photo.jpg"],"tags":[{"id":1,"name":"funny"}],"status":"sold"},{"id":536,"category":{"id":1,"name":"dog"},"name":"Marta","photoUrls":["https://example.com/photo.jpg"],"tags":[{"id":1,"name":"funny"}],"status":"sold"},{"id":418,"category":{"id":1,"name":"dog"},"name":"Marta","photoUrls":["https://example.com/photo.jpg"],"tags":[{"id":1,"name":"funny"}],"status":"sold"},{"id":23437566,"category":{"id":-46393995,"name":"ex ea culpa"},"name":"doggie","photoUrls":["ut ex veniam dolor","in aliquip"],"tags":[{"id":91638732,"name":"Excepteur ea commodo esse"},{"id":42980181,"name":"nulla officia ut labore"}],"status":"sold"},{"id":704,"category":{"id":1,"name":"dog"},"name":"Marta","photoUrls":["https://example.com/photo.jpg"],"tags":[{"id":1,"name":"funny"}],"status":"sold"},{"id":9223372036854773917,"category":{"id":0,"name":"string"},"name":"boss2.0","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":62751340,"category":{"id":-37441254,"name":"aute cillum voluptate veniam"},"name":"doggie","photoUrls":["mollit veniam","dolor enim reprehenderit"],"tags":[{"id":91709679,"name":"anim adipisicing"},{"id":919209,"name":"sint anim"}],"status":"sold"},{"id":60,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"tag"}],"status":"sold"},{"id":5644444,"category":{"id":566555,"name":"nulla minim laborum deserunt"},"name":"Собака","photoUrls":["anim ullamco laborum eu","eiusm"],"tags":[{"id":10156776,"name":"cillum adipisicing"},{"id":-53013483,"name":"sit Ut enim dolore"}],"status":"sold"},{"id":777123,"category":{"id":777123,"name":"fish"},"name":"Nemo","photoUrls":["https://img1.fonwall.ru/o/hl/sea-photography-flower-underwater.jpeg?route=mid&amp;h=750","https://img1.fonwall.ru/o/hl/sea-photography-flower-underwater.jpeg?route=mid&amp;h=750"],"tags":[{"id":123,"name":"priff"},{"id":123,"name":"ribka"}],"status":"sold"},{"id":70119872000,"category":{"id":93142102,"name":"Заяц французский 2"},"name":"LAPIN LAPIN","photoUrls":["mollit","https://irecommend.ru/sites/default/files/product-images/98227/3lJyZagay9aoxv06o6TJCQ.jpg"],"tags":[{"id":-19037377,"name":"deserunt veniam nulla reprehenderit"},{"id":51503358,"name":"ullamco aliqua Excepteur cillum"}],"status":"sold"},{"id":38480305,"category":{"id":-59161747,"name":"Duis voluptate consequat"},"name":"doggie","photoUrls":["ex enim ","nisi est"],"tags":[{"id":49121599,"name":"non anim exercitation"},{"id":2672065,"name":"sint"}],"status":"sold"},{"id":40010473,"category":{"id":-13430874,"name":"in fugiat ipsum"},"name":"doggie","photoUrls":["proident sed ut","aute laboris elit occaecat aliquip"],"tags":[{"id":-64712721,"name":"ad"},{"id":40504054,"name":"in"}],"status":"sold"},{"id":1777,"category":{"id":1777,"name":"fish"},"name":"Nemo","photoUrls":["https://www.google.com/imgres?q=fish&imgurl=https%3A%2F%2Fwww.aqueon.com%2F-%2Fmedia%2Fproject%2Foneweb%2Faqueon%2Fus%2Fblog%2Fways-to-know-your-fish-are-happy%2Ffish-are-happy-and-healthy-1.png&imgrefurl=https%3A%2F%2Fwww.aqueon.com%2Farticles%2Fways-to-know-your-fish-are-happy&docid=aYbA3xYlpw0ZcM&tbnid=uVomlcyWEqpA8M&vet=12ahUKEwibjaX_oeOIAxU0BdsEHe31LPwQM3oECB8QAA..i&w=1000&h=650&hcb=2&ved=2ahUKEwibjaX_oeOIAxU0BdsEHe31LPwQM3oECB8QAA","<string>"],"tags":[{"id":1777,"name":"Fish"},{"id":1777,"name":"Fish"}],"status":"sold"},{"id":90369791,"category":{"id":-28594492,"name":"ad"},"name":"doggie","photoUrls":["nulla ipsum dolor","cillum"],"tags":[{"id":16964237,"name":"velit aliquip occaecat voluptate"},{"id":-32143651,"name":"sed nulla sint"}],"status":"sold"},{"id":79897977,"category":{"id":-43696612,"name":"exercitation"},"name":"doggie","photoUrls":["dolor","velit voluptate"],"tags":[{"id":59218385,"name":"aliqua"},{"id":72829050,"name":"nostrud ut"}],"status":"sold"},{"id":33845545,"category":{"id":-13100367,"name":"deserunt aute irure"},"name":"doggie","photoUrls":["dolore reprehenderit adipisicing sed","tempor irure consectetur amet"],"tags":[{"id":-43225306,"name":"laborum proident Excepteur"},{"id":-7466415,"name":"ut in cupidatat laboris"}],"status":"sold"},{"id":24364310,"category":{"id":-12307344,"name":"kitten бфрмалейка"},"name":"kitten1","photoUrls":["dolor in","occaecat dolore consectetur adipisicing"],"tags":[{"id":-22679152,"name":"non ex"},{"id":33284191,"name":"sed pariatur in"}],"status":"sold"},{"id":13,"category":{"id":0,"name":"cats"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":36872199,"category":{"id":87131763,"name":"consectetur"},"name":"doggie","photoUrls":["officia","fugiat Duis sint"],"tags":[{"id":-32111804,"name":"sit consectetur"},{"id":-4313164,"name":"consectetur nulla laborum id"}],"status":"sold"},{"id":49199499,"category":{"id":20305865,"name":"et cupidatat nisi incididunt"},"name":"doggie","photoUrls":["sunt esse consequat","Ut nostrud anim adipisicing"],"tags":[{"id":33995919,"name":"tempor non nostrud"},{"id":-54707686,"name":"qui pariatur"}],"status":"sold"},{"id":2577326,"name":"TestPet","photoUrls":["http://example.com/photo.jpg"],"tags":[],"status":"sold"},{"id":45171733,"name":"TestPet","photoUrls":["http://example.com/photo.jpg"],"tags":[],"status":"sold"},{"id":36215036,"name":"TestPet","photoUrls":["http://example.com/photo.jpg"],"tags":[],"status":"sold"},{"id":78398178,"name":"TestPet","photoUrls":["http://example.com/photo.jpg"],"tags":[],"status":"sold"},{"id":218899,"name":"NewName","photoUrls":["http://example.com/photo.jpg"],"tags":[],"status":"sold"},{"id":17209398,"name":"TestPet","photoUrls":["http://example.com/photo.jpg"],"tags":[],"status":"sold"},{"id":7153442,"name":"TestPet","photoUrls":["http://example.com/photo.jpg"],"tags":[],"status":"sold"},{"id":51128609,"name":"TestPet","photoUrls":["http://example.com/photo.jpg"],"tags":[],"status":"sold"},{"id":54049548,"name":"NewName","photoUrls":["http://example.com/photo.jpg"],"tags":[],"status":"sold"},{"id":71147192,"name":"TestPet","photoUrls":["http://example.com/photo.jpg"],"tags":[],"status":"sold"},{"id":72072726,"name":"TestPet","photoUrls":["http://example.com/photo.jpg"],"tags":[],"status":"sold"},{"id":77790909,"name":"TestPet","photoUrls":["http://example.com/photo.jpg"],"tags":[],"status":"sold"},{"id":8228643,"name":"TestPet","photoUrls":["http://example.com/photo.jpg"],"tags":[],"status":"sold"},{"id":34430440,"name":"TestPet","photoUrls":["http://example.com/photo.jpg"],"tags":[],"status":"sold"},{"id":20446559,"name":"TestPet","photoUrls":["http://example.com/photo.jpg"],"tags":[],"status":"sold"},{"id":69745970,"name":"Updated","photoUrls":["http://new.url"],"tags":[],"status":"sold"}]
+
+18:50:57.579 [main] ERROR com.intuit.karate - classpath:com/petstore/api/petstore.feature:76
+And match response[0].name == 'Buddy Updated'
+match failed: EQUALS
+  $ | not equal (STRING:STRING)
+  'Xanxan'
+  'Buddy Updated'
+
+classpath:com/petstore/api/petstore.feature:76
+18:53:07.635 [main] ERROR c.intuit.karate.core.FeatureParser - not a valid feature file: com/petstore/api/petstore.feature - mismatched input '"' expecting <EOF>
+20:05:46.385 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:05:47.550 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:05:47.870 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 137
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":0,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:05:49.805 [main] DEBUG com.intuit.karate - response time in milliseconds: 1932
+1 < 200
+1 < Date: Sun, 25 May 2025 01:05:50 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":9222968140497180531,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:05:49.817 [main] INFO  com.intuit.karate - [print] created pet id is:  9222968140497180531 
+20:05:49.841 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:05:49.856 [main] ERROR com.intuit.karate - classpath:com/petstore/api/petstore.feature:37
+Given path 'pet', petId
+js failed:
+>>>>
+01: ['pet', petId]
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "petId" is not defined
+- <js>.:program(Unnamed:1)
+
+classpath:com/petstore/api/petstore.feature:37
+20:05:49.877 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:05:49.883 [main] DEBUG com.intuit.karate - request:
+1 > PUT https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 153
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":"petId + \"\"","category":{"id":0,"name":"string"},"name":"Buddy Updated","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"}
+
+20:05:50.127 [main] DEBUG com.intuit.karate - response time in milliseconds: 243
+1 < 500
+1 < Date: Sun, 25 May 2025 01:05:50 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":500,"type":"unknown","message":"something bad happened"}
+
+20:05:50.134 [main] ERROR com.intuit.karate - classpath:com/petstore/api/petstore.feature:69
+Then status 200
+status code was: 500, expected: 200, response time in milliseconds: 243, url: https://petstore.swagger.io/v2/pet, response: 
+{"code":500,"type":"unknown","message":"something bad happened"}
+classpath:com/petstore/api/petstore.feature:69
+20:05:50.152 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:05:50.160 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/findByStatus?status=sold
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:05:50.400 [main] DEBUG com.intuit.karate - response time in milliseconds: 239
+1 < 200
+1 < Date: Sun, 25 May 2025 01:05:50 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+[{"id":220,"category":{"id":2,"name":"pinscher"},"name":"gigante2","photoUrls":["https://site.com/rex.jpg"],"tags":[{"id":1,"name":"desaforado"}],"status":"sold"},{"id":13,"category":{"id":0,"name":"cats"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"}]
+
+20:05:50.433 [main] ERROR com.intuit.karate - classpath:com/petstore/api/petstore.feature:76
+And match response[0].name == 'Buddy Updated'
+match failed: EQUALS
+  $ | not equal (STRING:STRING)
+  'gigante2'
+  'Buddy Updated'
+
+classpath:com/petstore/api/petstore.feature:76
+20:06:25.289 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:06:27.038 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:06:27.366 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 137
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":0,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:06:27.915 [main] DEBUG com.intuit.karate - response time in milliseconds: 545
+1 < 200
+1 < Date: Sun, 25 May 2025 01:06:28 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":9222968140497180526,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:06:27.927 [main] INFO  com.intuit.karate - [print] created pet id is:  9222968140497180526 
+20:06:27.952 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:06:27.971 [main] ERROR com.intuit.karate - classpath:com/petstore/api/petstore.feature:37
+Given path 'pet', petId
+js failed:
+>>>>
+01: ['pet', petId]
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "petId" is not defined
+- <js>.:program(Unnamed:1)
+
+classpath:com/petstore/api/petstore.feature:37
+20:06:27.995 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:06:28.001 [main] DEBUG com.intuit.karate - request:
+1 > PUT https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 140
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":0,"category":{"id":0,"name":"string"},"name":"Buddy Updated","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"}
+
+20:06:28.246 [main] DEBUG com.intuit.karate - response time in milliseconds: 243
+1 < 200
+1 < Date: Sun, 25 May 2025 01:06:28 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":9222968140497180538,"category":{"id":0,"name":"string"},"name":"Buddy Updated","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"}
+
+20:06:28.265 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:06:28.271 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/findByStatus?status=sold
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:06:28.510 [main] DEBUG com.intuit.karate - response time in milliseconds: 239
+1 < 200
+1 < Date: Sun, 25 May 2025 01:06:28 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+[{"id":220,"category":{"id":2,"name":"pinscher"},"name":"gigante2","photoUrls":["https://site.com/rex.jpg"],"tags":[{"id":1,"name":"desaforado"}],"status":"sold"},{"id":13,"category":{"id":0,"name":"cats"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"}]
+
+20:06:28.533 [main] ERROR com.intuit.karate - classpath:com/petstore/api/petstore.feature:76
+And match response[0].name == 'Buddy Updated'
+match failed: EQUALS
+  $ | not equal (STRING:STRING)
+  'gigante2'
+  'Buddy Updated'
+
+classpath:com/petstore/api/petstore.feature:76
+20:09:51.476 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:09:53.030 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:09:53.523 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 137
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":0,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:09:54.174 [main] DEBUG com.intuit.karate - response time in milliseconds: 648
+1 < 200
+1 < Date: Sun, 25 May 2025 01:09:54 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":9222968140497180547,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:09:54.184 [main] INFO  com.intuit.karate - [print] Created pet id is:  9222968140497180547 
+20:09:54.207 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:09:54.227 [main] ERROR com.intuit.karate - classpath:com/petstore/api/petstore.feature:37
+Given path 'pet', petId
+js failed:
+>>>>
+01: ['pet', petId]
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "petId" is not defined
+- <js>.:program(Unnamed:1)
+
+classpath:com/petstore/api/petstore.feature:37
+20:09:54.254 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:09:54.260 [main] DEBUG com.intuit.karate - request:
+1 > PUT https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 140
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":0,"category":{"id":0,"name":"string"},"name":"Buddy Updated","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"}
+
+20:09:54.501 [main] DEBUG com.intuit.karate - response time in milliseconds: 239
+1 < 200
+1 < Date: Sun, 25 May 2025 01:09:54 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":9222968140497180554,"category":{"id":0,"name":"string"},"name":"Buddy Updated","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"}
+
+20:09:54.516 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:09:54.523 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/findByStatus?status=sold
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:09:54.764 [main] DEBUG com.intuit.karate - response time in milliseconds: 240
+1 < 200
+1 < Date: Sun, 25 May 2025 01:09:54 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+[{"id":220,"category":{"id":2,"name":"pinscher"},"name":"gigante2","photoUrls":["https://site.com/rex.jpg"],"tags":[{"id":1,"name":"desaforado"}],"status":"sold"},{"id":13,"category":{"id":0,"name":"cats"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"}]
+
+20:09:54.784 [main] ERROR com.intuit.karate - classpath:com/petstore/api/petstore.feature:77
+And match response[0].name == 'Buddy Updated'
+match failed: EQUALS
+  $ | not equal (STRING:STRING)
+  'gigante2'
+  'Buddy Updated'
+
+classpath:com/petstore/api/petstore.feature:77
+20:13:59.327 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:14:00.479 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:14:00.781 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 137
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":0,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:14:01.408 [main] DEBUG com.intuit.karate - response time in milliseconds: 624
+1 < 200
+1 < Date: Sun, 25 May 2025 01:14:01 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":9222968140497180584,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:14:01.423 [main] INFO  com.intuit.karate - [print] Created pet id is:  9222968140497180584 
+20:14:01.443 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:14:01.460 [main] ERROR com.intuit.karate - classpath:com/petstore/api/petstore.feature:37
+Given path 'pet', petId
+js failed:
+>>>>
+01: ['pet', petId]
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "petId" is not defined
+- <js>.:program(Unnamed:1)
+
+classpath:com/petstore/api/petstore.feature:37
+20:14:20.513 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:14:21.667 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:14:21.973 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 137
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":0,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:14:22.507 [main] DEBUG com.intuit.karate - response time in milliseconds: 530
+1 < 200
+1 < Date: Sun, 25 May 2025 01:14:22 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":9222968140497180574,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:14:22.517 [main] INFO  com.intuit.karate - [print] Created pet id is:  9222968140497180574 
+20:14:22.536 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:14:22.552 [main] ERROR com.intuit.karate - classpath:com/petstore/api/petstore.feature:37
+Given path 'pet', petId
+js failed:
+>>>>
+01: ['pet', petId]
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "petId" is not defined
+- <js>.:program(Unnamed:1)
+
+classpath:com/petstore/api/petstore.feature:37
+20:14:34.653 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:14:35.875 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:14:36.180 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 137
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":0,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:14:36.730 [main] DEBUG com.intuit.karate - response time in milliseconds: 545
+1 < 200
+1 < Date: Sun, 25 May 2025 01:14:36 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":9222968140497180587,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:14:36.741 [main] INFO  com.intuit.karate - [print] Created pet id is:  9222968140497180587 
+20:14:36.760 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:14:36.776 [main] ERROR com.intuit.karate - classpath:com/petstore/api/petstore.feature:37
+Given path 'pet', petId
+js failed:
+>>>>
+01: ['pet', petId]
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "petId" is not defined
+- <js>.:program(Unnamed:1)
+
+classpath:com/petstore/api/petstore.feature:37
+20:14:46.180 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:14:48.460 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:14:48.810 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:14:48.953 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 137
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":0,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:14:49.543 [main] DEBUG com.intuit.karate - response time in milliseconds: 585
+1 < 200
+1 < Date: Sun, 25 May 2025 01:14:49 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":9222968140497180577,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:14:49.557 [main] INFO  com.intuit.karate - [print] Created pet id is:  9222968140497180577 
+20:14:49.586 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:14:49.611 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/9.222968140497181E18
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:14:49.855 [main] DEBUG com.intuit.karate - response time in milliseconds: 243
+1 < 404
+1 < Date: Sun, 25 May 2025 01:14:50 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":404,"type":"unknown","message":"java.lang.NumberFormatException: For input string: \"9.222968140497181E18\""}
+
+20:14:49.864 [main] ERROR com.intuit.karate - classpath:com/petstore/api/petstore.feature:39
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 243, url: https://petstore.swagger.io/v2/pet/9.222968140497181E18, response: 
+{"code":404,"type":"unknown","message":"java.lang.NumberFormatException: For input string: \"9.222968140497181E18\""}
+classpath:com/petstore/api/petstore.feature:39
+20:14:50.236 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:14:50.663 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 137
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":0,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:14:51.261 [main] DEBUG com.intuit.karate - response time in milliseconds: 595
+1 < 200
+1 < Date: Sun, 25 May 2025 01:14:51 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":9222968140497180588,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:14:51.273 [main] INFO  com.intuit.karate - [print] Created pet id is:  9222968140497180588 
+20:14:51.295 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:14:51.433 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/9.222968140497181E18
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:14:51.690 [main] DEBUG com.intuit.karate - response time in milliseconds: 256
+1 < 404
+1 < Date: Sun, 25 May 2025 01:14:51 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":404,"type":"unknown","message":"java.lang.NumberFormatException: For input string: \"9.222968140497181E18\""}
+
+20:14:51.703 [main] ERROR com.intuit.karate - classpath:com/petstore/api/petstore.feature:39
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 256, url: https://petstore.swagger.io/v2/pet/9.222968140497181E18, response: 
+{"code":404,"type":"unknown","message":"java.lang.NumberFormatException: For input string: \"9.222968140497181E18\""}
+classpath:com/petstore/api/petstore.feature:39
+20:15:26.889 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:15:28.069 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:15:28.421 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 137
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":0,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:15:29.032 [main] DEBUG com.intuit.karate - response time in milliseconds: 609
+1 < 200
+1 < Date: Sun, 25 May 2025 01:15:29 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":9222968140497180581,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:15:29.041 [main] INFO  com.intuit.karate - [print] Created pet id is:  9222968140497180581 
+20:15:29.064 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:15:29.080 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/9.222968140497181E18
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:15:29.322 [main] DEBUG com.intuit.karate - response time in milliseconds: 241
+1 < 404
+1 < Date: Sun, 25 May 2025 01:15:29 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":404,"type":"unknown","message":"java.lang.NumberFormatException: For input string: \"9.222968140497181E18\""}
+
+20:15:29.327 [main] ERROR com.intuit.karate - classpath:com/petstore/api/petstore.feature:40
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 241, url: https://petstore.swagger.io/v2/pet/9.222968140497181E18, response: 
+{"code":404,"type":"unknown","message":"java.lang.NumberFormatException: For input string: \"9.222968140497181E18\""}
+classpath:com/petstore/api/petstore.feature:40
+20:16:39.172 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:16:40.581 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:16:40.993 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 137
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":0,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:16:41.614 [main] DEBUG com.intuit.karate - response time in milliseconds: 616
+1 < 200
+1 < Date: Sun, 25 May 2025 01:16:41 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":9222968140497180589,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:16:41.628 [main] INFO  com.intuit.karate - [print] Created pet id is:  9222968140497180589 
+20:16:41.653 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:16:41.668 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/1
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:16:41.914 [main] DEBUG com.intuit.karate - response time in milliseconds: 245
+1 < 404
+1 < Date: Sun, 25 May 2025 01:16:42 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":1,"type":"error","message":"Pet not found"}
+
+20:16:41.925 [main] ERROR com.intuit.karate - classpath:com/petstore/api/petstore.feature:40
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 245, url: https://petstore.swagger.io/v2/pet/1, response: 
+{"code":1,"type":"error","message":"Pet not found"}
+classpath:com/petstore/api/petstore.feature:40
+20:16:50.814 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:16:52.019 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:16:52.316 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 137
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":0,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:16:52.840 [main] DEBUG com.intuit.karate - response time in milliseconds: 521
+1 < 200
+1 < Date: Sun, 25 May 2025 01:16:53 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":9222968140497180591,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:16:52.852 [main] INFO  com.intuit.karate - [print] Created pet id is:  9222968140497180591 
+20:16:52.873 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:16:52.887 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/1
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:16:53.131 [main] DEBUG com.intuit.karate - response time in milliseconds: 244
+1 < 200
+1 < Date: Sun, 25 May 2025 01:16:53 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":1,"category":{"id":1,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":1,"name":"string"}],"status":"available"}
+
+20:19:34.763 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:19:35.945 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:19:36.256 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 137
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":0,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:19:36.856 [main] DEBUG com.intuit.karate - response time in milliseconds: 598
+1 < 200
+1 < Date: Sun, 25 May 2025 01:19:37 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":9222968140497180617,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:19:36.873 [main] INFO  com.intuit.karate - [print] Created pet id is:  9222968140497180617 
+20:19:36.891 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:19:36.903 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/1
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:19:37.156 [main] DEBUG com.intuit.karate - response time in milliseconds: 253
+1 < 200
+1 < Date: Sun, 25 May 2025 01:19:37 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":1,"category":{"id":1,"name":"String"},"name":"doggie","photoUrls":["String","String"],"tags":[{"id":1,"name":"String"}],"status":"available"}
+
+20:19:37.185 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:19:37.192 [main] DEBUG com.intuit.karate - request:
+1 > PUT https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 141
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":"","category":{"id":0,"name":"string"},"name":"Buddy Updated","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"}
+
+20:19:37.435 [main] DEBUG com.intuit.karate - response time in milliseconds: 242
+1 < 200
+1 < Date: Sun, 25 May 2025 01:19:37 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":9222968140497180602,"category":{"id":0,"name":"string"},"name":"Buddy Updated","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"}
+
+20:22:21.175 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:22:22.350 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:22:22.646 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 137
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":0,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:22:23.209 [main] DEBUG com.intuit.karate - response time in milliseconds: 557
+1 < 200
+1 < Date: Sun, 25 May 2025 01:22:23 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":9222968140497180634,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:22:23.220 [main] INFO  com.intuit.karate - [print] Created pet id is:  9222968140497180634 
+20:22:23.239 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:22:23.253 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/1
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:22:23.500 [main] DEBUG com.intuit.karate - response time in milliseconds: 246
+1 < 404
+1 < Date: Sun, 25 May 2025 01:22:23 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":1,"type":"error","message":"Pet not found"}
+
+20:22:23.507 [main] ERROR com.intuit.karate - classpath:com/petstore/api/petstore.feature:40
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 246, url: https://petstore.swagger.io/v2/pet/1, response: 
+{"code":1,"type":"error","message":"Pet not found"}
+classpath:com/petstore/api/petstore.feature:40
+20:22:23.540 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:22:23.548 [main] DEBUG com.intuit.karate - request:
+1 > PUT https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 134
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":"","category":{"id":2,"name":"string"},"name":"Pepito","photoUrls":["string"],"tags":[{"id":2,"name":"string"}],"status":"sold"}
+
+20:22:23.791 [main] DEBUG com.intuit.karate - response time in milliseconds: 241
+1 < 200
+1 < Date: Sun, 25 May 2025 01:22:24 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":9222968140497180618,"category":{"id":2,"name":"string"},"name":"Pepito","photoUrls":["string"],"tags":[{"id":2,"name":"string"}],"status":"sold"}
+
+20:22:23.806 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:22:23.814 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/findByStatus?status=sold
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:22:24.058 [main] DEBUG com.intuit.karate - response time in milliseconds: 242
+1 < 200
+1 < Date: Sun, 25 May 2025 01:22:24 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+[{"id":220,"category":{"id":2,"name":"pinscher"},"name":"gigante2","photoUrls":["https://site.com/rex.jpg"],"tags":[{"id":1,"name":"desaforado"}],"status":"sold"},{"id":13,"category":{"id":0,"name":"cats"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":9222968140497180538,"category":{"id":0,"name":"string"},"name":"Buddy Updated","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":9222968140497180554,"category":{"id":0,"name":"string"},"name":"Buddy Updated","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"}]
+
+20:22:24.096 [main] ERROR com.intuit.karate - classpath:com/petstore/api/petstore.feature:76
+* match foundPet.name == 'Pepito'
+js failed:
+>>>>
+01: foundPet.name
+<<<<
+org.graalvm.polyglot.PolyglotException: TypeError: Cannot read property "name" from null
+- <js>.:program(Unnamed:1)
+
+classpath:com/petstore/api/petstore.feature:76
+20:23:05.980 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:23:07.126 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:23:07.415 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 137
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":0,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:23:07.949 [main] DEBUG com.intuit.karate - response time in milliseconds: 529
+1 < 200
+1 < Date: Sun, 25 May 2025 01:23:08 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":9222968140497180640,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:23:07.964 [main] INFO  com.intuit.karate - [print] Created pet id is:  9222968140497180640 
+20:23:07.996 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:23:08.016 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/1
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:23:08.259 [main] DEBUG com.intuit.karate - response time in milliseconds: 243
+1 < 404
+1 < Date: Sun, 25 May 2025 01:23:08 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":1,"type":"error","message":"Pet not found"}
+
+20:23:08.264 [main] ERROR com.intuit.karate - classpath:com/petstore/api/petstore.feature:40
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 243, url: https://petstore.swagger.io/v2/pet/1, response: 
+{"code":1,"type":"error","message":"Pet not found"}
+classpath:com/petstore/api/petstore.feature:40
+20:23:08.284 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:23:08.290 [main] DEBUG com.intuit.karate - request:
+1 > PUT https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 141
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":"","category":{"id":2,"name":"string"},"name":"Buddy Updated","photoUrls":["string"],"tags":[{"id":2,"name":"string"}],"status":"sold"}
+
+20:23:08.531 [main] DEBUG com.intuit.karate - response time in milliseconds: 241
+1 < 200
+1 < Date: Sun, 25 May 2025 01:23:08 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":9222968140497180641,"category":{"id":2,"name":"string"},"name":"Buddy Updated","photoUrls":["string"],"tags":[{"id":2,"name":"string"}],"status":"sold"}
+
+20:23:08.549 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:23:08.557 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/findByStatus?status=sold
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:23:08.800 [main] DEBUG com.intuit.karate - response time in milliseconds: 242
+1 < 200
+1 < Date: Sun, 25 May 2025 01:23:09 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+[{"id":12,"category":{"id":0,"name":"dogs"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":220,"category":{"id":2,"name":"pinscher"},"name":"gigante2","photoUrls":["https://site.com/rex.jpg"],"tags":[{"id":1,"name":"desaforado"}],"status":"sold"},{"id":13,"category":{"id":0,"name":"cats"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":9222968140497180602,"category":{"id":0,"name":"string"},"name":"Buddy Updated","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":9222968140497180618,"category":{"id":2,"name":"string"},"name":"Pepito","photoUrls":["string"],"tags":[{"id":2,"name":"string"}],"status":"sold"}]
+
+20:23:44.545 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:23:45.397 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:23:45.614 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 137
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":0,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:23:46.148 [main] DEBUG com.intuit.karate - response time in milliseconds: 532
+1 < 200
+1 < Date: Sun, 25 May 2025 01:23:46 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":9222968140497180646,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:23:46.157 [main] INFO  com.intuit.karate - [print] Created pet id is:  9222968140497180646 
+20:23:46.170 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:23:46.181 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/1
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:23:46.421 [main] DEBUG com.intuit.karate - response time in milliseconds: 239
+1 < 200
+1 < Date: Sun, 25 May 2025 01:23:46 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":1,"category":{"id":0,"name":"Maria"},"name":"doggie","photoUrls":["string"],"tags":[{"id":20,"name":"string"},{"id":30,"name":"string"}],"status":"available"}
+
+20:23:46.448 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:23:46.454 [main] DEBUG com.intuit.karate - request:
+1 > PUT https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 141
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":"","category":{"id":2,"name":"string"},"name":"Buddy Updated","photoUrls":["string"],"tags":[{"id":2,"name":"string"}],"status":"sold"}
+
+20:23:46.696 [main] DEBUG com.intuit.karate - response time in milliseconds: 242
+1 < 200
+1 < Date: Sun, 25 May 2025 01:23:46 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":9222968140497180628,"category":{"id":2,"name":"string"},"name":"Buddy Updated","photoUrls":["string"],"tags":[{"id":2,"name":"string"}],"status":"sold"}
+
+20:23:46.707 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:23:46.715 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/findByStatus?status=sold
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:23:46.954 [main] DEBUG com.intuit.karate - response time in milliseconds: 237
+1 < 200
+1 < Date: Sun, 25 May 2025 01:23:47 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+[{"id":12,"category":{"id":0,"name":"dogs"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":220,"category":{"id":2,"name":"pinscher"},"name":"gigante2","photoUrls":["https://site.com/rex.jpg"],"tags":[{"id":1,"name":"desaforado"}],"status":"sold"},{"id":13,"category":{"id":0,"name":"cats"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":9222968140497180602,"category":{"id":0,"name":"string"},"name":"Buddy Updated","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":9222968140497180618,"category":{"id":2,"name":"string"},"name":"Pepito","photoUrls":["string"],"tags":[{"id":2,"name":"string"}],"status":"sold"},{"id":9222968140497180628,"category":{"id":2,"name":"string"},"name":"Buddy Updated","photoUrls":["string"],"tags":[{"id":2,"name":"string"}],"status":"sold"}]
+
+20:25:43.275 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:25:44.077 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:25:44.286 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 137
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":0,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:25:44.823 [main] DEBUG com.intuit.karate - response time in milliseconds: 534
+1 < 200
+1 < Date: Sun, 25 May 2025 01:25:45 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":9222968140497180661,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:25:44.830 [main] INFO  com.intuit.karate - [print] Created pet id is:  9222968140497180661 
+20:25:44.842 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:25:44.850 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/1
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:25:45.095 [main] DEBUG com.intuit.karate - response time in milliseconds: 245
+1 < 200
+1 < Date: Sun, 25 May 2025 01:25:45 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":1,"category":{"id":0,"name":"Maria"},"name":"doggie","photoUrls":["string"],"tags":[{"id":20,"name":"string"},{"id":30,"name":"string"}],"status":"available"}
+
+20:25:45.115 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:25:45.123 [main] DEBUG com.intuit.karate - request:
+1 > PUT https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 147
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":"","category":{"id":1232,"name":"string"},"name":"Buddy Updated","photoUrls":["string"],"tags":[{"id":1232,"name":"string"}],"status":"sold"}
+
+20:25:45.364 [main] DEBUG com.intuit.karate - response time in milliseconds: 240
+1 < 200
+1 < Date: Sun, 25 May 2025 01:25:45 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":9222968140497180649,"category":{"id":1232,"name":"string"},"name":"Buddy Updated","photoUrls":["string"],"tags":[{"id":1232,"name":"string"}],"status":"sold"}
+
+20:25:45.374 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:25:45.378 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/findByStatus?status=sold
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:25:45.617 [main] DEBUG com.intuit.karate - response time in milliseconds: 238
+1 < 200
+1 < Date: Sun, 25 May 2025 01:25:45 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+[{"id":220,"category":{"id":2,"name":"pinscher"},"name":"gigante2","photoUrls":["https://site.com/rex.jpg"],"tags":[{"id":1,"name":"desaforado"}],"status":"sold"},{"id":13,"category":{"id":0,"name":"cats"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":9222968140497180538,"category":{"id":0,"name":"string"},"name":"Buddy Updated","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":9222968140497180554,"category":{"id":0,"name":"string"},"name":"Buddy Updated","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":9222968140497180641,"category":{"id":2,"name":"string"},"name":"Buddy Updated","photoUrls":["string"],"tags":[{"id":2,"name":"string"}],"status":"sold"}]
+
+20:28:39.740 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:28:40.681 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:28:40.895 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 137
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":0,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:28:41.414 [main] DEBUG com.intuit.karate - response time in milliseconds: 516
+1 < 200
+1 < Date: Sun, 25 May 2025 01:28:41 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":9222968140497180673,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:28:41.422 [main] INFO  com.intuit.karate - [print] Created pet id is:  9222968140497180673 
+20:28:41.436 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:28:41.444 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/1
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:28:41.691 [main] DEBUG com.intuit.karate - response time in milliseconds: 247
+1 < 404
+1 < Date: Sun, 25 May 2025 01:28:41 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":1,"type":"error","message":"Pet not found"}
+
+20:28:41.697 [main] ERROR com.intuit.karate - classpath:com/petstore/api/petstore.feature:40
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 247, url: https://petstore.swagger.io/v2/pet/1, response: 
+{"code":1,"type":"error","message":"Pet not found"}
+classpath:com/petstore/api/petstore.feature:40
+20:28:41.716 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:28:41.744 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:28:41.748 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/findByStatus?status=sold
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:28:41.990 [main] DEBUG com.intuit.karate - response time in milliseconds: 241
+1 < 200
+1 < Date: Sun, 25 May 2025 01:28:42 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+[{"id":220,"category":{"id":2,"name":"pinscher"},"name":"gigante2","photoUrls":["https://site.com/rex.jpg"],"tags":[{"id":1,"name":"desaforado"}],"status":"sold"},{"id":13,"category":{"id":0,"name":"cats"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":9222968140497180538,"category":{"id":0,"name":"string"},"name":"Buddy Updated","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":9222968140497180554,"category":{"id":0,"name":"string"},"name":"Buddy Updated","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":9222968140497180641,"category":{"id":2,"name":"string"},"name":"Buddy Updated","photoUrls":["string"],"tags":[{"id":2,"name":"string"}],"status":"sold"}]
+
+20:31:00.512 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:31:01.324 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:31:01.536 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 137
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":0,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:31:02.008 [main] DEBUG com.intuit.karate - response time in milliseconds: 469
+1 < 200
+1 < Date: Sun, 25 May 2025 01:31:02 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":9222968140497180688,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:31:02.017 [main] INFO  com.intuit.karate - [print] Created pet id is:  9222968140497180688 
+20:31:02.030 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:31:02.038 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/1
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:31:02.281 [main] DEBUG com.intuit.karate - response time in milliseconds: 241
+1 < 200
+1 < Date: Sun, 25 May 2025 01:31:02 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":1,"category":{"id":1,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":1,"name":"string"}],"status":"available"}
+
+20:31:02.305 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:31:02.317 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:31:02.325 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/9.222968140497181E18
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:31:02.566 [main] DEBUG com.intuit.karate - response time in milliseconds: 240
+1 < 404
+1 < Date: Sun, 25 May 2025 01:31:02 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":404,"type":"unknown","message":"java.lang.NumberFormatException: For input string: \"9.222968140497181E18\""}
+
+20:31:02.571 [main] ERROR com.intuit.karate - classpath:com/petstore/api/petstore.feature:68
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 240, url: https://petstore.swagger.io/v2/pet/9.222968140497181E18, response: 
+{"code":404,"type":"unknown","message":"java.lang.NumberFormatException: For input string: \"9.222968140497181E18\""}
+classpath:com/petstore/api/petstore.feature:68
+20:31:51.687 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:31:52.560 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:31:52.774 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 137
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":0,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:31:53.289 [main] DEBUG com.intuit.karate - response time in milliseconds: 511
+1 < 200
+1 < Date: Sun, 25 May 2025 01:31:53 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":9222968140497180685,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:31:53.297 [main] INFO  com.intuit.karate - [print] Created pet id is:  9222968140497180685 
+20:31:53.309 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:31:53.318 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/1
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:31:53.564 [main] DEBUG com.intuit.karate - response time in milliseconds: 245
+1 < 404
+1 < Date: Sun, 25 May 2025 01:31:53 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":1,"type":"error","message":"Pet not found"}
+
+20:31:53.568 [main] ERROR com.intuit.karate - classpath:com/petstore/api/petstore.feature:40
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 245, url: https://petstore.swagger.io/v2/pet/1, response: 
+{"code":1,"type":"error","message":"Pet not found"}
+classpath:com/petstore/api/petstore.feature:40
+20:31:53.583 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:31:53.593 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:31:53.595 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/3
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:31:53.836 [main] DEBUG com.intuit.karate - response time in milliseconds: 240
+1 < 200
+1 < Date: Sun, 25 May 2025 01:31:54 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":3,"category":{"id":2,"name":"Cats"},"name":"Cat 3","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag3"},{"id":2,"name":"tag4"}],"status":"pending"}
+
+20:31:53.852 [main] ERROR com.intuit.karate - classpath:com/petstore/api/petstore.feature:69
+And match response.name == 'Pepito'
+match failed: EQUALS
+  $ | not equal (STRING:STRING)
+  'Cat 3'
+  'Pepito'
+
+classpath:com/petstore/api/petstore.feature:69
+20:32:26.495 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:32:27.343 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:32:27.554 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 137
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":0,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:32:28.009 [main] DEBUG com.intuit.karate - response time in milliseconds: 453
+1 < 200
+1 < Date: Sun, 25 May 2025 01:32:28 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":9222968140497180695,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:32:28.017 [main] INFO  com.intuit.karate - [print] Created pet id is:  9222968140497180695 
+20:32:28.031 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:32:28.041 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/1
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:32:28.285 [main] DEBUG com.intuit.karate - response time in milliseconds: 243
+1 < 404
+1 < Date: Sun, 25 May 2025 01:32:28 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":1,"type":"error","message":"Pet not found"}
+
+20:32:28.291 [main] ERROR com.intuit.karate - classpath:com/petstore/api/petstore.feature:40
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 243, url: https://petstore.swagger.io/v2/pet/1, response: 
+{"code":1,"type":"error","message":"Pet not found"}
+classpath:com/petstore/api/petstore.feature:40
+20:32:28.307 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:32:28.316 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:32:28.319 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/3
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:32:28.559 [main] DEBUG com.intuit.karate - response time in milliseconds: 240
+1 < 404
+1 < Date: Sun, 25 May 2025 01:32:28 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":1,"type":"error","message":"Pet not found"}
+
+20:32:28.563 [main] ERROR com.intuit.karate - classpath:com/petstore/api/petstore.feature:68
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 240, url: https://petstore.swagger.io/v2/pet/3, response: 
+{"code":1,"type":"error","message":"Pet not found"}
+classpath:com/petstore/api/petstore.feature:68
+20:33:41.547 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:33:42.406 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:33:42.610 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 137
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":0,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:33:43.114 [main] DEBUG com.intuit.karate - response time in milliseconds: 498
+1 < 200
+1 < Date: Sun, 25 May 2025 01:33:43 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":9222968140497180702,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:33:43.129 [main] INFO  com.intuit.karate - [print] Created pet id is:  9222968140497180702 
+20:33:43.148 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:33:43.160 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/1
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:33:43.404 [main] DEBUG com.intuit.karate - response time in milliseconds: 243
+1 < 200
+1 < Date: Sun, 25 May 2025 01:33:43 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":1,"category":{"id":0,"name":"Maria"},"name":"doggie","photoUrls":["string"],"tags":[{"id":20,"name":"string"},{"id":30,"name":"string"}],"status":"available"}
+
+20:33:43.424 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:33:43.433 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:33:43.436 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/3
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:33:43.680 [main] DEBUG com.intuit.karate - response time in milliseconds: 243
+1 < 200
+1 < Date: Sun, 25 May 2025 01:33:43 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":3,"category":{"id":2,"name":"Cats"},"name":"Cat 3","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag3"},{"id":2,"name":"tag4"}],"status":"pending"}
+
+20:33:43.687 [main] ERROR com.intuit.karate - classpath:com/petstore/api/petstore.feature:69
+And match response.name == 'Pepito'
+match failed: EQUALS
+  $ | not equal (STRING:STRING)
+  'Cat 3'
+  'Pepito'
+
+classpath:com/petstore/api/petstore.feature:69
+20:36:26.678 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:36:27.516 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:36:27.738 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 137
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":0,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:36:28.280 [main] DEBUG com.intuit.karate - response time in milliseconds: 540
+1 < 200
+1 < Date: Sun, 25 May 2025 01:36:28 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":9222968140497180712,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:36:28.289 [main] INFO  com.intuit.karate - [print] Created pet id is:  9222968140497180712 
+20:36:28.303 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:36:28.312 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/1
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:36:28.559 [main] DEBUG com.intuit.karate - response time in milliseconds: 246
+1 < 200
+1 < Date: Sun, 25 May 2025 01:36:28 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":1,"category":{"id":1,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":1,"name":"string"}],"status":"available"}
+
+20:36:28.584 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:36:28.589 [main] ERROR com.intuit.karate - classpath:com/petstore/api/petstore.feature:45
+* def updatedPet =
+"""
+{
+  "id": "" + 3 "",
+  "category": {
+    "id": 0,
+    "name": "string"
+  },
+  "name": "Pepito",
+  "photoUrls": ["string"],
+  "tags": [
+    {
+      "id": 0,
+      "name": "string"
+    }
+  ],
+  "status": "sold"
+}
+"""
+net.minidev.json.parser.ParseException: Unexpected token + at position 12.
+classpath:com/petstore/api/petstore.feature:45
+20:36:28.603 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:36:28.606 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/3
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:36:28.845 [main] DEBUG com.intuit.karate - response time in milliseconds: 238
+1 < 404
+1 < Date: Sun, 25 May 2025 01:36:29 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":1,"type":"error","message":"Pet not found"}
+
+20:36:28.851 [main] ERROR com.intuit.karate - classpath:com/petstore/api/petstore.feature:68
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 238, url: https://petstore.swagger.io/v2/pet/3, response: 
+{"code":1,"type":"error","message":"Pet not found"}
+classpath:com/petstore/api/petstore.feature:68
+20:36:49.532 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:36:50.346 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:36:50.549 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 137
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":0,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:36:51.026 [main] DEBUG com.intuit.karate - response time in milliseconds: 473
+1 < 200
+1 < Date: Sun, 25 May 2025 01:36:51 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":9222968140497180715,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:36:51.034 [main] INFO  com.intuit.karate - [print] Created pet id is:  9222968140497180715 
+20:36:51.048 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:36:51.056 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/1
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:36:51.296 [main] DEBUG com.intuit.karate - response time in milliseconds: 239
+1 < 200
+1 < Date: Sun, 25 May 2025 01:36:51 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":1,"category":{"id":1,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":1,"name":"string"}],"status":"available"}
+
+20:36:51.321 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:36:51.328 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:36:51.331 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/3
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:36:51.571 [main] DEBUG com.intuit.karate - response time in milliseconds: 239
+1 < 404
+1 < Date: Sun, 25 May 2025 01:36:51 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":1,"type":"error","message":"Pet not found"}
+
+20:36:51.575 [main] ERROR com.intuit.karate - classpath:com/petstore/api/petstore.feature:68
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 239, url: https://petstore.swagger.io/v2/pet/3, response: 
+{"code":1,"type":"error","message":"Pet not found"}
+classpath:com/petstore/api/petstore.feature:68
+20:37:56.422 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:37:57.295 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:37:57.525 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 137
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":0,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:37:58.007 [main] DEBUG com.intuit.karate - response time in milliseconds: 479
+1 < 200
+1 < Date: Sun, 25 May 2025 01:37:58 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":9222968140497180721,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:37:58.016 [main] INFO  com.intuit.karate - [print] Created pet id is:  9222968140497180721 
+20:37:58.031 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:37:58.041 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/1
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:37:58.283 [main] DEBUG com.intuit.karate - response time in milliseconds: 241
+1 < 200
+1 < Date: Sun, 25 May 2025 01:37:58 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":1,"category":{"id":1,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":1,"name":"string"}],"status":"available"}
+
+20:37:58.304 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:37:58.308 [main] DEBUG com.intuit.karate - request:
+1 > PUT https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 133
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":3,"category":{"id":0,"name":"string"},"name":"Pepito","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"}
+
+20:37:58.547 [main] DEBUG com.intuit.karate - response time in milliseconds: 237
+1 < 200
+1 < Date: Sun, 25 May 2025 01:37:58 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":3,"category":{"id":0,"name":"string"},"name":"Pepito","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"}
+
+20:37:58.561 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:37:58.566 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/3
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:37:58.803 [main] DEBUG com.intuit.karate - response time in milliseconds: 236
+1 < 404
+1 < Date: Sun, 25 May 2025 01:37:59 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":1,"type":"error","message":"Pet not found"}
+
+20:37:58.807 [main] ERROR com.intuit.karate - classpath:com/petstore/api/petstore.feature:72
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 236, url: https://petstore.swagger.io/v2/pet/3, response: 
+{"code":1,"type":"error","message":"Pet not found"}
+classpath:com/petstore/api/petstore.feature:72
+20:38:29.687 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:38:30.523 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:38:30.736 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 137
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":0,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:38:31.201 [main] DEBUG com.intuit.karate - response time in milliseconds: 463
+1 < 200
+1 < Date: Sun, 25 May 2025 01:38:31 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":9222968140497180741,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:38:31.209 [main] INFO  com.intuit.karate - [print] Created pet id is:  9222968140497180741 
+20:38:31.224 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:38:31.234 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/1
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:38:31.472 [main] DEBUG com.intuit.karate - response time in milliseconds: 237
+1 < 404
+1 < Date: Sun, 25 May 2025 01:38:31 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":1,"type":"error","message":"Pet not found"}
+
+20:38:31.480 [main] ERROR com.intuit.karate - classpath:com/petstore/api/petstore.feature:40
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 237, url: https://petstore.swagger.io/v2/pet/1, response: 
+{"code":1,"type":"error","message":"Pet not found"}
+classpath:com/petstore/api/petstore.feature:40
+20:38:31.498 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:38:31.504 [main] DEBUG com.intuit.karate - request:
+1 > PUT https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 133
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":3,"category":{"id":0,"name":"string"},"name":"Pepito","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"}
+
+20:38:31.744 [main] DEBUG com.intuit.karate - response time in milliseconds: 239
+1 < 200
+1 < Date: Sun, 25 May 2025 01:38:31 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":3,"category":{"id":0,"name":"string"},"name":"Pepito","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"}
+
+20:38:31.757 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:38:31.760 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/3
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:38:31.999 [main] DEBUG com.intuit.karate - response time in milliseconds: 238
+1 < 200
+1 < Date: Sun, 25 May 2025 01:38:32 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":3,"category":{"id":0,"name":"string"},"name":"Pepito","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"}
+
+20:38:40.551 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:38:41.409 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:38:41.613 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 137
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":0,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:38:42.081 [main] DEBUG com.intuit.karate - response time in milliseconds: 466
+1 < 200
+1 < Date: Sun, 25 May 2025 01:38:42 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":9222968140497180746,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:38:42.088 [main] INFO  com.intuit.karate - [print] Created pet id is:  9222968140497180746 
+20:38:42.104 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:38:42.113 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/1
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:38:42.359 [main] DEBUG com.intuit.karate - response time in milliseconds: 244
+1 < 404
+1 < Date: Sun, 25 May 2025 01:38:42 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":1,"type":"error","message":"Pet not found"}
+
+20:38:42.366 [main] ERROR com.intuit.karate - classpath:com/petstore/api/petstore.feature:40
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 244, url: https://petstore.swagger.io/v2/pet/1, response: 
+{"code":1,"type":"error","message":"Pet not found"}
+classpath:com/petstore/api/petstore.feature:40
+20:38:42.381 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:38:42.385 [main] DEBUG com.intuit.karate - request:
+1 > PUT https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 133
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":3,"category":{"id":0,"name":"string"},"name":"Pepito","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"}
+
+20:38:42.626 [main] DEBUG com.intuit.karate - response time in milliseconds: 240
+1 < 200
+1 < Date: Sun, 25 May 2025 01:38:42 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":3,"category":{"id":0,"name":"string"},"name":"Pepito","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"}
+
+20:38:42.635 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:38:42.640 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/3
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:38:42.880 [main] DEBUG com.intuit.karate - response time in milliseconds: 238
+1 < 200
+1 < Date: Sun, 25 May 2025 01:38:43 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":3,"category":{"id":0,"name":"string"},"name":"Pepito","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"}
+
+20:38:50.276 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:38:51.109 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:38:51.318 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 137
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":0,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:38:51.792 [main] DEBUG com.intuit.karate - response time in milliseconds: 471
+1 < 200
+1 < Date: Sun, 25 May 2025 01:38:51 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":9222968140497180747,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:38:51.801 [main] INFO  com.intuit.karate - [print] Created pet id is:  9222968140497180747 
+20:38:51.813 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:38:51.822 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/1
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:38:52.062 [main] DEBUG com.intuit.karate - response time in milliseconds: 239
+1 < 200
+1 < Date: Sun, 25 May 2025 01:38:52 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":1,"category":{"id":1,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":1,"name":"string"}],"status":"available"}
+
+20:38:52.082 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:38:52.088 [main] DEBUG com.intuit.karate - request:
+1 > PUT https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 133
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":3,"category":{"id":0,"name":"string"},"name":"Pepito","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"}
+
+20:38:52.330 [main] DEBUG com.intuit.karate - response time in milliseconds: 241
+1 < 200
+1 < Date: Sun, 25 May 2025 01:38:52 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":3,"category":{"id":0,"name":"string"},"name":"Pepito","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"}
+
+20:38:52.344 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:38:52.347 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/3
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:38:52.587 [main] DEBUG com.intuit.karate - response time in milliseconds: 239
+1 < 200
+1 < Date: Sun, 25 May 2025 01:38:52 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":3,"category":{"id":0,"name":"string"},"name":"Pepito","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"}
+
+20:39:49.075 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:39:49.906 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:39:50.112 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 137
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":0,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:39:50.660 [main] DEBUG com.intuit.karate - response time in milliseconds: 547
+1 < 200
+1 < Date: Sun, 25 May 2025 01:39:50 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":9222968140497180750,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:39:50.669 [main] INFO  com.intuit.karate - [print] Created pet id is:  9222968140497180750 
+20:39:50.682 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:39:50.689 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/1
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:39:50.936 [main] DEBUG com.intuit.karate - response time in milliseconds: 246
+1 < 200
+1 < Date: Sun, 25 May 2025 01:39:51 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":1,"category":{"id":1,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":1,"name":"string"}],"status":"available"}
+
+20:39:50.960 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:39:50.966 [main] DEBUG com.intuit.karate - request:
+1 > PUT https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 133
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":3,"category":{"id":0,"name":"string"},"name":"Pepito","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"}
+
+20:39:51.209 [main] DEBUG com.intuit.karate - response time in milliseconds: 243
+1 < 200
+1 < Date: Sun, 25 May 2025 01:39:51 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":3,"category":{"id":0,"name":"string"},"name":"Pepito","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"}
+
+20:39:51.221 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:39:51.224 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/3
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:39:51.467 [main] DEBUG com.intuit.karate - response time in milliseconds: 242
+1 < 200
+1 < Date: Sun, 25 May 2025 01:39:51 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":3,"category":{"id":0,"name":"string"},"name":"Pepito","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"}
+
+20:39:51.482 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:39:51.485 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/findByStatus?status=sold
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:39:51.728 [main] DEBUG com.intuit.karate - response time in milliseconds: 243
+1 < 200
+1 < Date: Sun, 25 May 2025 01:39:51 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+[{"id":220,"category":{"id":2,"name":"pinscher"},"name":"gigante2","photoUrls":["https://site.com/rex.jpg"],"tags":[{"id":1,"name":"desaforado"}],"status":"sold"},{"id":13,"category":{"id":0,"name":"cats"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":9222968140497180602,"category":{"id":0,"name":"string"},"name":"Buddy Updated","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":9222968140497180618,"category":{"id":2,"name":"string"},"name":"Pepito","photoUrls":["string"],"tags":[{"id":2,"name":"string"}],"status":"sold"},{"id":9222968140497180628,"category":{"id":2,"name":"string"},"name":"Buddy Updated","photoUrls":["string"],"tags":[{"id":2,"name":"string"}],"status":"sold"},{"id":9222968140497180649,"category":{"id":1232,"name":"string"},"name":"Buddy Updated","photoUrls":["string"],"tags":[{"id":1232,"name":"string"}],"status":"sold"},{"id":3,"category":{"id":0,"name":"string"},"name":"Pepito","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"}]
+
+20:40:04.150 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:40:04.985 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:40:05.200 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 137
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":0,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:40:05.670 [main] DEBUG com.intuit.karate - response time in milliseconds: 468
+1 < 200
+1 < Date: Sun, 25 May 2025 01:40:05 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":9222968140497180751,"category":{"id":0,"name":"string"},"name":"Buddy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:40:05.679 [main] INFO  com.intuit.karate - [print] Created pet id is:  9222968140497180751 
+20:40:05.692 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:40:05.701 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/1
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:40:05.943 [main] DEBUG com.intuit.karate - response time in milliseconds: 242
+1 < 200
+1 < Date: Sun, 25 May 2025 01:40:06 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":1,"category":{"id":1,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":1,"name":"string"}],"status":"available"}
+
+20:40:05.968 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:40:05.972 [main] DEBUG com.intuit.karate - request:
+1 > PUT https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 133
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":3,"category":{"id":0,"name":"string"},"name":"Pepito","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"}
+
+20:40:06.216 [main] DEBUG com.intuit.karate - response time in milliseconds: 243
+1 < 200
+1 < Date: Sun, 25 May 2025 01:40:06 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":3,"category":{"id":0,"name":"string"},"name":"Pepito","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"}
+
+20:40:06.228 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:40:06.235 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/findByStatus?status=sold
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/24.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:40:06.474 [main] DEBUG com.intuit.karate - response time in milliseconds: 238
+1 < 200
+1 < Date: Sun, 25 May 2025 01:40:06 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+[{"id":220,"category":{"id":2,"name":"pinscher"},"name":"gigante2","photoUrls":["https://site.com/rex.jpg"],"tags":[{"id":1,"name":"desaforado"}],"status":"sold"},{"id":13,"category":{"id":0,"name":"cats"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":9222968140497180602,"category":{"id":0,"name":"string"},"name":"Buddy Updated","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":9222968140497180618,"category":{"id":2,"name":"string"},"name":"Pepito","photoUrls":["string"],"tags":[{"id":2,"name":"string"}],"status":"sold"},{"id":9222968140497180628,"category":{"id":2,"name":"string"},"name":"Buddy Updated","photoUrls":["string"],"tags":[{"id":2,"name":"string"}],"status":"sold"},{"id":9222968140497180649,"category":{"id":1232,"name":"string"},"name":"Buddy Updated","photoUrls":["string"],"tags":[{"id":1232,"name":"string"}],"status":"sold"},{"id":3,"category":{"id":0,"name":"string"},"name":"Pepito","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"}]
+

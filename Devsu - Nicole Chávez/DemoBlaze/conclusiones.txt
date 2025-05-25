@@ -1,0 +1,10 @@
+* Hallazgos
+- Las pruebas automatizadas se ejecutaron sin errores, es decir se hizo el flujo completo simulando una compra real
+- Se verificó que la navegación en la página funciona de manera correcta
+- Las pruebas confirmaron que se puede realizar la compra de productos sin ningún inconveniente
+- En la carpeta reporte se puede observar los resultados
+
+* Conclusiones
+- Las pruebas automatizadas son necesarias en especial en el período de pruebas
+- Las pruebas automatizadas validan que el funcionamiento sea el correcto y que aunque existan correcciones o más desarrollos siga correcta la funcionalidad
+- Las pruebas automatizadas tienen obligatoriamente que ser reejecutables
